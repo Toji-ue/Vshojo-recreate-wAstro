@@ -1,0 +1,71 @@
+:root {
+    --white: #FFFFFF;
+    --black: #000000;
+    --live: #FF0000;
+    --vshojo-pink: #F50F75;
+    --vshojo-dark-gray: #2A2A2A;
+    --vshojo-light-gray: #707070;
+    --hero-color: none;
+    --wave-svg: url(src/assets/svg/wave.svg);
+    --hero-img: none ;
+    --drop-button-background: var(--button-color);
+    --drop-button-padding: 0;
+    --drop-button-stroke: 1px;
+    --drop-button-radius: .25rem;
+    --drop-button-depth-1: 1px;
+    --drop-button-depth-3: 3px;
+    --drop-button-depth-2: 4px;
+    --drop-button-depth-4: 8px;
+    --drop-button-click: calc(var(--drop-button-depth-4) * 2 / 3);
+    --drop-button-animation: 2.666666667px;
+    --background-color: #FFD4FA;
+}
+
+.bg-custom {
+    background: var(--wave-svg) center center, linear-gradient(white -20%, var(--hero-color) 100%);
+    background-size: 3840px;
+    background-blend-mode: soft-light,normal;
+}
+
+.grid-area-1{
+    grid-area: 1 / -1
+}
+
+.grid-area-2{
+    grid-area: 2 / -1
+}
+
+.bg-hero-image{
+    background-image: var(--hero-img);
+    background-repeat: no-repeat;
+    background-size: contain;
+    grid-area: 1 / -1
+}
+.menu{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    padding-top: 2.5rem;
+    z-index: 100;
+    overflow: hidden;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity .2s ease-in-out;
+    background: linear-gradient(var(--white), var(--background-color) 100vh);
+}
+.show{
+    pointer-events: unset;
+    opacity: 1;
+}
+
+@media (max-width: 750px) {
+    html {
+        font-size: 12px;
+    }
+}
+@media (max-width: 1200px) {
+    .bg-hero-image{
+        grid-area: 2 / -1
+    }
+}
