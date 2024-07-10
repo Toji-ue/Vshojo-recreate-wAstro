@@ -1,0 +1,107 @@
+---
+import  { apricot,geega,hajime,haruka,henya,ironmouse,kson,kuro,matara,melody,mochi,zentreya } from "../assets/img/Discover/index"
+import "../global.css"
+import styles from "../styles"
+const images = [apricot, geega, hajime, haruka, henya, ironmouse, kson, kuro, matara, melody, mochi, zentreya];
+---
+<script>
+    const a = Array(1001).fill(0).map((c, t) => {
+        const e = t / 1e3,
+        n = 3 * (1 - e) * e * e * 0.58 + e * e * e,
+        o = 3 * (1 - e) * e * e + e * e * e;
+        return [n, o];
+    }).reverse();
+
+    const l = document.querySelector(".meet") as HTMLElement;
+    const u = document.querySelector(".meet .faces") as HTMLElement;
+
+    const s = () => {
+        const c = document.documentElement.clientHeight;
+        const { bottom: t, height: e } = l.getBoundingClientRect();
+        const n = 0.2;
+        const o = 1 - (t - c) / e + n;
+        const r = Math.min(Math.max(o, 0), 1);
+        const m = a.find(([i, d]) => i <= r)[1];
+        u.style.setProperty("--scroll", `${m}`);
+    };
+
+    document.addEventListener("scroll", () => {
+        requestAnimationFrame(s);
+    });
+
+    s();
+    document.addEventListener("DOMContentLoaded", () => {
+                // Get the parent element containing the image divs
+                const parentElement = document.querySelector('.faces');
+                
+                // Get all the child elements (the image divs) and store them in an array
+                const children = Array.from(parentElement.children);
+                
+                // Function to shuffle the array using Fisher-Yates algorithm
+                function shuffleArray(array) {
+                    for (let i = array.length - 1; i > 0; i--) {
+                        const j = Math.floor(Math.random() * (i + 1));
+                        [array[i], array[j]] = [array[j], array[i]];
+                    }
+                }
+                
+                // Shuffle the array
+                shuffleArray(children);
+                
+                // Append the shuffled elements back to the parent element
+                children.forEach(child => parentElement.appendChild(child));
+            });
+</script>
+<div class="meet">
+    <div class="faces scroll-img snap-y	snap-start">
+        <div class="scroll-div bg-[#C4ECAE]">
+            <img src={apricot} class="img-faces max-w-[none]">
+        </div>
+        <div class="scroll-div bg-[#EEE3D1]">
+            <img src={geega} class="img-faces max-w-[none]">
+        </div>
+        <div class="scroll-div bg-[#FDDABE]">
+            <img src={hajime} class="img-faces max-w-[none]">
+        </div>
+        <div class="scroll-div bg-[#E1F4E3]">
+            <img src={haruka} class="img-faces max-w-[none]">
+        </div>
+        <div class="scroll-div bg-[#DACEEF]">
+            <img src={henya} class="img-faces max-w-[none]">
+        </div>
+        <div class="scroll-div bg-[#F7A4BF]">
+            <img src={ironmouse} class="img-faces max-w-[none]">
+        </div>
+        <div class="scroll-div bg-[#F2C4DC]">
+            <img src={kson} class="img-faces max-w-[none]">
+        </div>
+        <div class="scroll-div bg-[#FF757E]">
+            <img src={kuro} class="img-faces max-w-[none]">
+        </div>
+        <div class="scroll-div bg-[#fae9f1]">
+            <img src={matara} class="img-faces max-w-[none]">
+        </div>
+        <div class="scroll-div bg-[#B1E0E9]">
+            <img src={melody} class="img-faces max-w-[none]">
+        </div>
+        <div class="scroll-div bg-[#D8A1EB]">
+            <img src={mochi} class="img-faces max-w-[none]">
+        </div>
+        <div class="scroll-div bg-[#F3B9B7]">
+            <img src={zentreya} class="img-faces max-w-[none]">
+        </div>
+    </div>
+    <div class="text">
+        <div class="text-white">
+            <a class={`${styles.meetBtn}`}>
+                <div class="inline-block overflow-hidden p-[.75rem_1.25rem] bg-Vpink border-2 border-solid border-black rounded-[.5rem]">
+                    <h1 class="text-[5.5rem] m-0 leading-[1]">
+                        Meet our
+                        <br>
+                        talents
+                    </h1>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>

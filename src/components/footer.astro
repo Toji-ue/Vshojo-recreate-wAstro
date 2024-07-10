@@ -1,0 +1,40 @@
+---
+import styles from "../styles"
+import { FaTwitch } from "react-icons/fa";
+import { FaReddit } from "react-icons/fa";
+import { FaYoutube } from "react-icons/fa";
+import { FaTwitter } from "react-icons/fa";
+import { vshojo } from "../assets/svg/index";
+---
+
+<footer class="text-white bg-[#2A2A2A] leading-[1.25rem]">
+    <div class="flex py-[3.125rem] whitespace-nowrap max-w-[1920px] m-auto">
+        <div class={`${styles.margin}`}></div>
+        <ul>
+            <div class="mb-[.75rem] text-[#707070] underline-sm">Links</div>
+            <li class="mb-[.75rem]"><a href="">Home</a></li>
+            <li class="mb-[.75rem]"><a href="">About</a></li>
+            <li class="mb-[.75rem]"><a href="">Talent</a></li>
+            <li class="mb-[.75rem]"><a href="">Merch</a></li>
+            <li class="mb-[.75rem]"><a href="">Brand</a></li>
+            <li class="mb-[.75rem]"><a href="">Legal</a></li>
+            <li class="mb-[.75rem]"><a href="">Privacy Policy</a></li>
+        </ul>
+        <div class={`${styles.padding} ${styles.lgShowsmHidden}`}></div>
+        <div class={`${styles.spacer} sm:hidden block`}></div>
+        <ul>
+            <div class="mb-[.75rem] text-[#707070] underline-sm">Socials</div>
+            <li class="mb-[.75rem]"><a href="" class="inline-block"><FaTwitch className="h-6 w-6"/></a></li>
+            <li class="mb-[.75rem]"><a href="" class="inline-block"><FaReddit className="h-6 w-6"/></a></li>
+            <li class="mb-[.75rem]"><a href="" class="inline-block"><FaYoutube className="h-6 w-6"/></a></li>
+            <li class="mb-[.75rem]"><a href="" class="inline-block"><FaTwitter className="h-6 w-6"/></a></li>
+        </ul>
+        <div class={`${styles.spacer} ${styles.lgShowsmHidden}`}></div>
+        <ul class={`${styles.lgShowsmHidden}`}>
+            <div class="mb-[.75rem] text-[#707070] underline-sm">Contact</div>
+            <div class="mb-[.75rem] "><img src={vshojo} class="h-[2.5rem]"></div>
+            <div class="mb-[.75rem] ">Vshojo Inc.<br>San Francisco<br>CA 94102</div>
+        </ul>
+        <div class={`${styles.margin}`}></div>
+    </div>
+</footer>

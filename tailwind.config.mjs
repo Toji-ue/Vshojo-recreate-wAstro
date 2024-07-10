@@ -8,7 +8,16 @@ export default {
 		fontFamily: {
 			mont: ["Montserrat Variable","sans-serif"]
 		},
+		animation:{
+			'marquee': 'marquee 24s linear infinite'
+		},
 		extend: {
+			translate: {
+				'onScroll' : 'calc(-65rem * var(--scroll))'
+			},
+			gridTemplateColumns:{
+				'meetImg': 'repeat(auto-fit,minmax(300px,1fr))'
+			},
 			gridTemplateRows: {
 				'custom-layout': 'min-content 1fr',
 			  },

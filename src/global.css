@@ -19,12 +19,21 @@
     --drop-button-click: calc(var(--drop-button-depth-4) * 2 / 3);
     --drop-button-animation: 2.666666667px;
     --background-color: #FFD4FA;
+    --meet-btn-hover: calc(var(--drop-button-depth-4) * 1 / 3)
+}
+
+.grid-rows-cols{
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
 }
 
 .bg-custom {
     background: var(--wave-svg) center center, linear-gradient(white -20%, var(--hero-color) 100%);
     background-size: 3840px;
     background-blend-mode: soft-light,normal;
+}
+.transform-custom {
+    transform: translate(-50%);
 }
 
 .grid-area-1{
@@ -59,6 +68,57 @@
     opacity: 1;
 }
 
+.scroll-img{
+    grid-area: 1 / 1;
+    height: 135rem;
+    --scroll: 0px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-auto-flow: column;
+    transform: translateY(calc(-65rem* var(--scroll)));
+    will-change: transform;
+}
+.img-faces{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    bottom: 0;
+}
+.scroll-div{
+    position: relative; 
+    overflow: hidden
+}
+.text{
+    grid-area: 1 / 1;
+    height: 67.5rem;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    padding: 24rem 1rem 1rem;
+}
+.meet {
+    height: 67.5rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    overflow: hidden;
+}
+
+.underline-sm:after{
+    display: block;
+    content: "\2014";
+    line-height: .25rem;
+}
+@keyframes marquee {
+    from {
+        transform: translate(0)
+    }
+
+    to {
+        transform: translate(-25%)
+    }
+}
+
 @media (max-width: 750px) {
     html {
         font-size: 12px;
@@ -66,6 +126,7 @@
 }
 @media (max-width: 1200px) {
     .bg-hero-image{
-        grid-area: 2 / -1
+        grid-area: 2 / -1;
+        background-size: cover
     }
 }
