@@ -1,9 +1,8 @@
 ---
 import styles from "../styles"
 import '@fontsource-variable/montserrat';
-import { Navbar, Hero, Meet, Sponsors,Footer } from "../components/index"
-import  { vshojo } from "../assets/svg/index"
-import { IoMdArrowDropdown } from "react-icons/io";
+import { Navbar, Footer } from "../components/Global/index"
+import { Hero, Meet, Sponsors } from "../components/Main/index"
 ---
 
 <html lang="en">
@@ -15,7 +14,7 @@ import { IoMdArrowDropdown } from "react-icons/io";
 		<title>Astro</title>
 	</head>
 	<body>
-		<div class={`relative flex flex-col font-mont pt-[2.5rem] min-h-[100vh] min-w-[20rem] ${styles.heroBg}`}>
+		<div class={`${styles.wrapper} ${styles.heroBg} bg-[linear-gradient(var(--white)_var(--background-color)_100vh)]`}>
 			<Navbar/>
 			<div class="w-full">
 				<Hero/>

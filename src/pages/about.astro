@@ -1,0 +1,251 @@
+---
+import styles from "../styles"
+import "../global.css"
+import '@fontsource-variable/montserrat';
+import { Navbar,Footer } from "../components/Global/index"
+---
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Astro</title>
+    </head>
+    <body>
+        <div class={`${styles.wrapper} ${styles.heroBg} background_color`}>
+            <Navbar/>
+            <div class="max-w-[60rem] m-auto p-[1rem] flex-_">
+                <div class="mb-[8rem]">
+                    <h1 class="text-center mb-[3rem] text-[5rem] font-bold tracking-[-.25rem] leading-[92%]">About Us</h1>
+                    <div class="grid md:grid-cols-[1fr_1fr] gap-[3rem] mb-[3rem] grid-cols-[1fr]">
+                        <p class="text-Vpink text-[1.75rem] font-bold md:text-start text-center">VShojo is on a mission to empower unique individuals. We believe in embracing ourselves without apology and believe in true connection through technology.</p>
+                        <div>
+                            <h1 class="text-[1.5rem] m-0 font-bold md:text-start text-center ">What is VShojo?</h1>
+                            <p class="my-[1rem] md:text-start text-center">We are a VTuber company based in San Francisco, CA. Our organization launched on November 24th 2020.</p>
+                            <p class="my-[1rem] md:text-start text-center">VShojo's mission is to help VTubers turn their passion into a profession through dedicated management, tech innovations, collaboration, and support.</p>
+                        </div>
+                    </div>
+                    <div class="text-center mb-[3rem] mt-[6rem]">
+                        <a class={`${styles.titleA}`}>
+                            <div class={`${styles.title} ${styles.titlePadding} bg-white inline-block rounded-[.5rem]`}>
+                                THE FOUNDERS
+                            </div>
+                        </a>
+                    </div>
+                    <div class="grid md:grid-cols-[1fr_1fr_1fr] gap-[3rem] md:items-start grid-cols-[1fr] justify-items-center">
+                        <div class="staffbio">
+                            <div class="grid-pic">
+                                <a class={`${styles.titleA} block`}>
+                                    <div class={`p-0 ${styles.title} bg-white rounded-[2rem]`}>
+                                        <div class={`gunrun`}>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="text-[1.4rem] font-bold grid-name">theGunrun</div>
+                            <div class="flex flex-row justify-end min-h-[calc(2rem+24px)] grid-links">
+                                <div class="leading-[0] m-[.4rem]">
+                                    <a href="" class={`${styles.socialBtn}`}>
+                                        <div class={`${styles.socialBtnin}`}>
+                                            <svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" class="astro-UFRYZWR6 astro-XNOXSESQ" width="24" height="24" viewBox="0 0 24 24" role="img">
+                                                <title>Twitter</title>
+                                                <path d="M22.46,6C21.69,6.35 20.86,6.58 20,6.69C20.88,6.16 21.56,5.32 21.88,4.31C21.05,4.81 20.13,5.16 19.16,5.36C18.37,4.5 17.26,4 16,4C13.65,4 11.73,5.92 11.73,8.29C11.73,8.63 11.77,8.96 11.84,9.27C8.28,9.09 5.11,7.38 3,4.79C2.63,5.42 2.42,6.16 2.42,6.94C2.42,8.43 3.17,9.75 4.33,10.5C3.62,10.5 2.96,10.3 2.38,10C2.38,10 2.38,10 2.38,10.03C2.38,12.11 3.86,13.85 5.82,14.24C5.46,14.34 5.08,14.39 4.69,14.39C4.42,14.39 4.15,14.36 3.89,14.31C4.43,16 6,17.26 7.89,17.29C6.43,18.45 4.58,19.13 2.56,19.13C2.22,19.13 1.88,19.11 1.54,19.07C3.44,20.29 5.7,21 8.12,21C16,21 20.33,14.46 20.33,8.79C20.33,8.6 20.33,8.42 20.32,8.23C21.16,7.63 21.88,6.87 22.46,6Z" class="astro-XNOXSESQ"></path>
+                                            </svg>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="leading-[0] m-[.4rem]">
+                                    <a href="" class={`${styles.socialBtn}`}>
+                                        <div class={`${styles.socialBtnin}`}>
+                                            <svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" class="astro-UFRYZWR6 astro-XNOXSESQ" width="24" height="24" viewBox="0 0 24 24" role="img">
+                                                <title>Twitch</title>
+                                                <path d="M11.64 5.93H13.07V10.21H11.64M15.57 5.93H17V10.21H15.57M7 2L3.43 5.57V18.43H7.71V22L11.29 18.43H14.14L20.57 12V2M19.14 11.29L16.29 14.14H13.43L10.93 16.64V14.14H7.71V3.43H19.14Z" class="astro-XNOXSESQ"></path>
+                                            </svg>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="staffbio">
+                            <div class="grid-pic">
+                                <a class={`${styles.titleA} block`}>
+                                    <div class={`p-0 ${styles.title} bg-white rounded-[2rem]`}>
+                                        <div class={`mowtendoo`}>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="text-[1.4rem] font-bold grid-name">Mowtendoo</div>
+                            <div class="flex flex-row justify-end min-h-[calc(2rem+24px)] grid-links">
+                                <div class="leading-[0] m-[.4rem]">
+                                    <a href="" class={`${styles.socialBtn}`}>
+                                        <div class={`${styles.socialBtnin}`}>
+                                            <svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" class="astro-UFRYZWR6 astro-XNOXSESQ" width="24" height="24" viewBox="0 0 24 24" role="img">
+                                                <title>Twitter</title>
+                                                <path d="M22.46,6C21.69,6.35 20.86,6.58 20,6.69C20.88,6.16 21.56,5.32 21.88,4.31C21.05,4.81 20.13,5.16 19.16,5.36C18.37,4.5 17.26,4 16,4C13.65,4 11.73,5.92 11.73,8.29C11.73,8.63 11.77,8.96 11.84,9.27C8.28,9.09 5.11,7.38 3,4.79C2.63,5.42 2.42,6.16 2.42,6.94C2.42,8.43 3.17,9.75 4.33,10.5C3.62,10.5 2.96,10.3 2.38,10C2.38,10 2.38,10 2.38,10.03C2.38,12.11 3.86,13.85 5.82,14.24C5.46,14.34 5.08,14.39 4.69,14.39C4.42,14.39 4.15,14.36 3.89,14.31C4.43,16 6,17.26 7.89,17.29C6.43,18.45 4.58,19.13 2.56,19.13C2.22,19.13 1.88,19.11 1.54,19.07C3.44,20.29 5.7,21 8.12,21C16,21 20.33,14.46 20.33,8.79C20.33,8.6 20.33,8.42 20.32,8.23C21.16,7.63 21.88,6.87 22.46,6Z" class="astro-XNOXSESQ"></path>
+                                            </svg>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="leading-[0] m-[.4rem]">
+                                    <a href="" class={`${styles.socialBtn}`}>
+                                        <div class={`${styles.socialBtnin}`}>
+                                            <svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" class="astro-UFRYZWR6 astro-XNOXSESQ" width="24" height="24" viewBox="0 0 24 24" role="img">
+                                                <title>Twitch</title>
+                                                <path d="M11.64 5.93H13.07V10.21H11.64M15.57 5.93H17V10.21H15.57M7 2L3.43 5.57V18.43H7.71V22L11.29 18.43H14.14L20.57 12V2M19.14 11.29L16.29 14.14H13.43L10.93 16.64V14.14H7.71V3.43H19.14Z" class="astro-XNOXSESQ"></path>
+                                            </svg>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="staffbio">
+                            <div class="grid-pic">
+                                <a class={`${styles.titleA} block`}>
+                                    <div class={`p-0 ${styles.title} bg-white rounded-[2rem]`}>
+                                        <div class={`apek`}>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="text-[1.4rem] font-bold grid-name">Apek</div>
+                        </div>
+                    </div>
+                    <div class="text-center mb-[3rem] mt-[6rem]">
+                        <a class={`${styles.titleA}`}>
+                            <div class={`${styles.title} ${styles.titlePadding} bg-white inline-block rounded-[.5rem]`}>
+                                FAQ
+                            </div>
+                        </a>
+                    </div>
+                    <div class="mb-[3rem] accordion group" style="--slot-height: 115.1875px;">
+                        <a class={`${styles.FaqBtn}`}>
+                            <div class={`${styles.title} bg-Vpink p-0 rounded-[.5rem]`}>
+                                <div class="faq-content">
+                                    <div class="grid-title text-[1.25rem] font-bold">What's a VTuber?</div>
+                                    <div class="transition-opacity ease-in-out duration-200 grid-icon expand-icon">
+                                        <svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" class="astro-OQJBS5YV astro-XNOXSESQ" width="36" height="36" viewBox="0 0 24 24" role="img">
+                                            <title>expand</title>
+                                            <path d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z" class="astro-XNOXSESQ"></path>
+                                        </svg>
+                                    </div>
+                                    <div class="collapse-icon grid-icon transition-opacity ease-in-out duration-200">
+                                        <svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" class="astro-OQJBS5YV astro-XNOXSESQ" width="36" height="36" viewBox="0 0 24 24" role="img">
+                                            <title>collapse</title>
+                                            <path d="M19,13H5V11H19V13Z" class="astro-XNOXSESQ"></path>
+                                        </svg>
+                                    </div>
+                                    <div class="grid-slot overflow-hidden h-0 transition-[height] duration-200 ease-in-out slot">
+                                        <div class="text-[1rem] font-medium">
+                                            VTubers (Virtual YouTubers) are creators that use motion-captured avatars to create content.
+                                            <br>
+                                            <br>
+                                            VTubers represent the future of content creation by giving anyone the opportunity to shine without the IRL cultural and physical barriers that traditionally defines entertainers. Only their imagination and creativity are needed to carve out the identity they wish to reflect and we support this new breed of influencers.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="mb-[3rem] accordion group" style="--slot-height: 19.1875px;">
+                        <a class={`${styles.FaqBtn}`}>
+                            <div class={`${styles.title} bg-Vpink p-0 rounded-[.5rem]`}>
+                                <div class="faq-content">
+                                    <div class="grid-title text-[1.25rem] font-bold">What makes us Talent First?</div>
+                                    <div class="transition-opacity ease-in-out duration-200 grid-icon expand-icon">
+                                        <svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" class="astro-OQJBS5YV astro-XNOXSESQ" width="36" height="36" viewBox="0 0 24 24" role="img">
+                                            <title>expand</title>
+                                            <path d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z" class="astro-XNOXSESQ"></path>
+                                        </svg>
+                                    </div>
+                                    <div class="collapse-icon grid-icon transition-opacity ease-in-out duration-200">
+                                        <svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" class="astro-OQJBS5YV astro-XNOXSESQ" width="36" height="36" viewBox="0 0 24 24" role="img">
+                                            <title>collapse</title>
+                                            <path d="M19,13H5V11H19V13Z" class="astro-XNOXSESQ"></path>
+                                        </svg>
+                                    </div>
+                                    <div class="grid-slot overflow-hidden h-0 transition-[height] duration-200 ease-in-out slot">
+                                        <div class="text-[1rem] font-medium">
+                                            We listen to our talent's feedback, work hard to achieve their dreams, and have them keep their IP.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="mb-[3rem] accordion group" style="--slot-height: 19.1875px;">
+                        <a class={`${styles.FaqBtn}`}>
+                            <div class={`${styles.title} bg-Vpink p-0 rounded-[.5rem]`}>
+                                <div class="faq-content">
+                                    <div class="grid-title text-[1.25rem] font-bold">Can I create fanart and sell it?</div>
+                                    <div class="transition-opacity ease-in-out duration-200 grid-icon expand-icon">
+                                        <svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" class="astro-OQJBS5YV astro-XNOXSESQ" width="36" height="36" viewBox="0 0 24 24" role="img">
+                                            <title>expand</title>
+                                            <path d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z" class="astro-XNOXSESQ"></path>
+                                        </svg>
+                                    </div>
+                                    <div class="collapse-icon grid-icon transition-opacity ease-in-out duration-200">
+                                        <svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" class="astro-OQJBS5YV astro-XNOXSESQ" width="36" height="36" viewBox="0 0 24 24" role="img">
+                                            <title>collapse</title>
+                                            <path d="M19,13H5V11H19V13Z" class="astro-XNOXSESQ"></path>
+                                        </svg>
+                                    </div>
+                                    <div class="grid-slot overflow-hidden h-0 transition-[height] duration-200 ease-in-out slot">
+                                        <div class="text-[1rem] font-medium">
+                                           Yes
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="mb-[3rem] accordion group" style="--slot-height: 96px;">
+                        <a class={`${styles.FaqBtn}`}>
+                            <div class={`${styles.title} bg-Vpink p-0 rounded-[.5rem]`}>
+                                <div class="faq-content">
+                                    <div class="grid-title text-[1.25rem] font-bold">Can I clip and upload VShojo streams?</div>
+                                    <div class="transition-opacity ease-in-out duration-200 grid-icon expand-icon">
+                                        <svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" class="astro-OQJBS5YV astro-XNOXSESQ" width="36" height="36" viewBox="0 0 24 24" role="img">
+                                            <title>expand</title>
+                                            <path d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z" class="astro-XNOXSESQ"></path>
+                                        </svg>
+                                    </div>
+                                    <div class="collapse-icon grid-icon transition-opacity ease-in-out duration-200">
+                                        <svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" class="astro-OQJBS5YV astro-XNOXSESQ" width="36" height="36" viewBox="0 0 24 24" role="img">
+                                            <title>collapse</title>
+                                            <path d="M19,13H5V11H19V13Z" class="astro-XNOXSESQ"></path>
+                                        </svg>
+                                    </div>
+                                    <div class="grid-slot overflow-hidden h-0 transition-[height] duration-200 ease-in-out slot">
+                                        <div class="text-[1rem] font-medium">
+                                            Yes! Please link our talent's socials at the top of your description. Do NOT take things out of context that will paint VShojo or talent in a bad light. Moments that are negative to the talent or VShojo are NOT ok to clip. Do NOT mislead with your titles. You ARE allowed to monetize! Still know that we reserve the right to take down anything as we see fit and will pursue legal action to the fullest extent of the law where necessary.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="mt-[9rem] text-center mb-[3rem]">
+                        <h1 class="text-[2em] font-bold my-[0.67em]">Want to Collaborate? Looking for press info?</h1>
+                        <div class="h-max">
+                            <a href="mailto:pr@vshojo.com" class={`${styles.contactBtn}`}>
+                                <div class="inline-block overflow-hidden bg-Vpink p-[.75rem_1.25rem] border-[2px] border-black border-solid rounded-[.5rem]">Contact Us</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <Footer/>
+        <script>
+                const faqs = document.querySelectorAll('.accordion');
+
+                faqs.forEach(faq => {
+                faq.addEventListener('click', function() {
+                    faq.classList.toggle('open');
+                });
+                });
+        </script>
+    </body>
+</html>

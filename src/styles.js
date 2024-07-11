@@ -1,19 +1,6 @@
 
 const styles = {
-    boxWidth: "xl:max-w-[1280px] w-full",
-  
-    heading2: "font-mont font-semibold xs:text-[48px] text-[40px] text-Vpink xs:leading-[76.8px] leading-[66.8px] w-full",
-    paragraph: "font-mont font-normal text-Vpink text-[18px] leading-[30.8px]",
-  
-    flexCenter: "flex justify-center items-center",
-    flexStart: "flex justify-center items-start",
-  
-    paddingX: "sm:px-16 px-6",
-    paddingY: "sm:py-16 py-6",
-    padding: "sm:px-16 px-6 sm:py-12 py-4",
-  
-    marginX: "sm:mx-16 mx-6",
-    marginY: "sm:my-16 my-6",
+    wrapper:"relative flex flex-col font-mont pt-[2.5rem] min-h-[100vh] min-w-[20rem]",
 
     margin: "grow-0	shrink basis-[5rem]",
     padding: "grow-0 shrink basis-[3.875rem]",
@@ -32,7 +19,20 @@ const styles = {
     dropdownlangSelectlink: "mr-[8px] mb-[8px] block font-mont font-bold text-[1.125rem] drop-shadow-custom-x4 group-active:hover:drop-shadow-custom-x2 gr group-active:hover:mt-[--drop-button-click] group-active:hover:ml-[--drop-button-click] group-active:hover:mb-[--drop-button-animation] group-active:hover:mr-[--drop-button-animation]",
     dropdownlangSelectlinkchild: "block overflow-hidden py-[2rem] px-[1.5rem] border-[2px] border-solid border-black rounded-[.5rem] bg-white",
 
-    meetBtn:"inline-block text-[1.125rem] font-bold m-[0_var(--drop-button-depth-4)_var(--drop-button-depth-4)_0] drop-shadow-custom-x4 hover:cursor-pointer hover:m-[var(--meet-btn-hover)_calc(var(--drop-button-depth-4)-var(--meet-btn-hover))_calc(var(--drop-button-depth-4)-var(--meet-btn-hover))_var(--meet-btn-hover)] hover:drop-shadow-custom-x2"
+    meetBtn:"inline-block text-[1.125rem] font-bold m-[0_var(--drop-button-depth-4)_var(--drop-button-depth-4)_0] drop-shadow-custom-x4 hover:cursor-pointer hover:m-[var(--meet-btn-hover)_calc(var(--drop-button-depth-4)-var(--meet-btn-hover))_calc(var(--drop-button-depth-4)-var(--meet-btn-hover))_var(--meet-btn-hover)] hover:drop-shadow-custom-x2",
+
+    titleA:"text-[1.125rem] font-bold m-[0_var(--drop-button-depth-4)_var(--drop-button-depth-4)_0] drop-shadow-custom-x4",
+    titlePadding:"py-[.75rem] px-[1.25rem]",
+    title:"block overflow-hidden border-[2px] border-solid border border-black",
+
+    bgFounder: "aspect-[4/3] bg-cover bg-center",
+
+    socialBtn: "inline-block text-[1.125rem] font-bold m-[0_var(--drop-button-depth-3)_var(--drop-button-depth-3)_0] drop-shadow-custom hover:cursor-pointer hover:m-[var(--social-btn-hover)_calc(var(--drop-button-depth-3)-var(--social-btn-hover))_calc(var(--drop-button-depth-3)-var(--social-btn-hover))_var(--social-btn-hover)] hover:drop-shadow-socialBtnHover",
+    socialBtnin: "inline-block overflow-hidden p-[.4rem] bg-Vpink rounded-[50%] border-[2px] border-solid border-black",
+    FaqBtn:"block text-[1.125rem] font-bold m-[0_var(--drop-button-depth-4)_var(--drop-button-depth-4)_0] drop-shadow-custom-x4 hover:cursor-pointer group-hover:m-[var(--meet-btn-hover)_calc(var(--drop-button-depth-4)-var(--meet-btn-hover))_calc(var(--drop-button-depth-4)-var(--meet-btn-hover))_var(--meet-btn-hover)] group-hover:drop-shadow-faqBtnHover",
+    marginHover:"m-[var(--meet-btn-hover)_calc(var(--drop-button-depth-4) - var(--meet-btn-hover))_calc(var(--drop-button-depth-4) - var(--drop-button-hover))_var(--drop-button-hover)]",
+
+    contactBtn: "inline-block text-[1.125rem] font-bold m-[0_var(--drop-button-depth-4)_var(--drop-button-depth-4)_0] drop-shadow-custom-x4 hover:drop-shadow-faqBtnHover hover:m-[var(--meet-btn-hover)_calc(var(--drop-button-depth-4)-var(--meet-btn-hover))_calc(var(--drop-button-depth-4)-var(--meet-btn-hover))_var(--meet-btn-hover)]"
 }
 
 export default styles;

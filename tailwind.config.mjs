@@ -38,7 +38,9 @@ export default {
 				'custom-x1': 'var(--drop-button-depth-1) var(--drop-button-depth-1) 0 #000000',
 				'custom-x2': 'var(--drop-button-depth-2) var(--drop-button-depth-2) 0 #000000',
 				'custom-x4': 'var(--drop-button-depth-4) var(--drop-button-depth-4) 0 #000000',
-				'custom-a': 'var(--drop-button-animation) var(--drop-button-animation) 0 #000000)'
+				'custom-a': 'var(--drop-button-animation) var(--drop-button-animation) 0 #000000)',
+				'socialBtnHover': 'calc(var(--drop-button-depth-3)-var(--social-btn-hover)) calc(var(--drop-button-depth-3)-var(--social-btn-hover)) 0 #000000',
+				'faqBtnHover': 'calc(var(--drop-button-depth-4) - var(--meet-btn-hover)) calc(var(--drop-button-depth-4) - var(--meet-btn-hover)) 0 #000000'
 			  },
 		},
 		screens: {
