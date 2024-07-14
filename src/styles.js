@@ -32,7 +32,10 @@ const styles = {
     FaqBtn:"block text-[1.125rem] font-bold m-[0_var(--drop-button-depth-4)_var(--drop-button-depth-4)_0] drop-shadow-custom-x4 hover:cursor-pointer group-hover:m-[var(--meet-btn-hover)_calc(var(--drop-button-depth-4)-var(--meet-btn-hover))_calc(var(--drop-button-depth-4)-var(--meet-btn-hover))_var(--meet-btn-hover)] group-hover:drop-shadow-faqBtnHover",
     marginHover:"m-[var(--meet-btn-hover)_calc(var(--drop-button-depth-4) - var(--meet-btn-hover))_calc(var(--drop-button-depth-4) - var(--drop-button-hover))_var(--drop-button-hover)]",
 
-    contactBtn: "inline-block text-[1.125rem] font-bold m-[0_var(--drop-button-depth-4)_var(--drop-button-depth-4)_0] drop-shadow-custom-x4 hover:drop-shadow-faqBtnHover hover:m-[var(--meet-btn-hover)_calc(var(--drop-button-depth-4)-var(--meet-btn-hover))_calc(var(--drop-button-depth-4)-var(--meet-btn-hover))_var(--meet-btn-hover)]"
+    contactBtn: "inline-block text-[1.125rem] font-bold m-[0_var(--drop-button-depth-4)_var(--drop-button-depth-4)_0] drop-shadow-custom-x4 hover:drop-shadow-faqBtnHover hover:m-[var(--meet-btn-hover)_calc(var(--drop-button-depth-4)-var(--meet-btn-hover))_calc(var(--drop-button-depth-4)-var(--meet-btn-hover))_var(--meet-btn-hover)]",
+
+    talentsocialBtn: "inline-block text-[1.125rem] font-bold m-[0_var(--drop-button-depth-3)_var(--drop-button-depth-3)_0] drop-shadow-custom group-hover:cursor-pointer group-hover:m-[var(--social-btn-hover)_calc(var(--drop-button-depth-3)-var(--social-btn-hover))_calc(var(--drop-button-depth-3)-var(--social-btn-hover))_var(--social-btn-hover)] group-hover:drop-shadow-socialBtnHover",
+    talentsocialBtnchild: "inline-block overflow-hidden p-[.4rem] bg-[var(--drop-button-background)] border-solid border border-black rounded-[50%]"
 }
 
 export default styles;
