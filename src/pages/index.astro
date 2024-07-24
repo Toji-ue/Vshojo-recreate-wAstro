@@ -1,8 +1,25 @@
 ---
 import styles from "../styles"
 import '@fontsource-variable/montserrat';
-import { Navbar, Footer } from "../components/Global/index"
-import { Hero, Meet, Sponsors } from "../components/Main/index"
+import { Navbar, Footer } from "../components/index"
+import "../global.css";
+import { FaLongArrowAltRight } from "react-icons/fa";
+import { talents, quotes } from "../constant/index";
+import { capcom,funimation,goodsmile,sega,squareenix,ubisoft } from "../assets/svg/index"
+
+const getRandomTalent = () => talents[Math.floor(Math.random() * talents.length)];
+const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
+const randomTalent = getRandomTalent();
+
+function shuffleArray(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+  return array;
+}
+
+const shuffledTalents = shuffleArray([...talents]);
 ---
 
 <html lang="en">
@@ -11,15 +28,70 @@ import { Hero, Meet, Sponsors } from "../components/Main/index"
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
+		<script>
+			const a=Array(1001).fill(0).map((c,t)=>{const e=t/1e3,n=3*(1-e)*e*e*.58+e*e*e,o=3*(1-e)*e*e+e*e*e;return[n,o]}).reverse(),l=document.querySelector(".meet") as HTMLElement,u=document.querySelector(".meet .faces") as HTMLElement,s=()=>{const c=document.documentElement.clientHeight,{bottom:t,height:e}=l.getBoundingClientRect(),n=.2,o=1-(t-c)/e+n,r=Math.min(Math.max(o,0),1),m=a.find(([i,d])=>i<=r)[1];u.style.setProperty("--scroll",`${m}`)};document.addEventListener("scroll",()=>{requestAnimationFrame(s)});s();
+		</script>
 		<title>Astro</title>
 	</head>
 	<body>
 		<div class={`${styles.wrapper} ${styles.heroBg} bg-[linear-gradient(var(--white)_var(--background-color)_100vh)]`}>
 			<Navbar/>
 			<div class="w-full">
-				<Hero/>
-				<Meet/>
-				<Sponsors/>
+				<section class="mt-[-11rem] pt-[6rem] h-[calc(40rem+440px)] overflow-hidden bg-custom grid lg:grid-rows-none grid-rows-[min-content_1fr]" style={`--hero-color: ${randomTalent.heroColor}`}>
+					<div class="lg:ml-[40%] lg:mr-[-30vw] bg-hero-image lg:bg-20-100 sm:bg-top bg-bottom" style={`--bg-hero-image: url(${randomTalent.backgroundHero})`}></div>
+					<div class="grid-area-1 p-[10%] lg:pr-[50%] grid">
+						<div class="self-end text-Vpink lg:min-w-[42rem] text-[4rem] font-bold tracking-[-.125rem] font-mont leading-[4rem] min-w-0">
+							{randomQuote}
+						</div>
+						<div class="self-start text-Vpink lg:text-[1.5rem] text-[1rem] font-semibold">
+							<a href="" class="inline-flex items-center">Discover more about the world of VTubing <FaLongArrowAltRight className="scale-x-[2] origin-left"/></a>
+						</div>
+					</div>
+				</section>
+				<div class="h-[67.5rem] grid grid-cols-[1fr] grid-rows-[1fr] overflow-hidden meet">
+					<div class="faces col-[1_/_1] h-[135rem] grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] grid-flow-col translate-y-[calc(-65rem*var(--scroll))] will-change-transform" style="--scroll: 0;">
+						{shuffledTalents.map((talent) => (
+							<div class="relative overflow-hidden bg-[var(--bg-color)]" style={`--bg-color: ${talent.backgroundColor}`}>
+								<img src={talent.backgroundDiscover} class="absolute left-[50%] translate-x-[-50%] bottom-0 max-w-[none]">
+							</div>
+						))}
+					</div>
+					<div class="grid-area-1 h-[67.5rem] grid place-items-center text-center p-[24rem_1rem_1rem] absolute w-full">
+						<div class="text-white">
+							<a href="/talents/" class={`${styles.meetBtn}`}>
+								<div class="inline-block overflow-hidden p-[.75rem_1.25rem] bg-Vpink border-2 border-solid border-black rounded-[.5rem]">
+									<h1 class="text-[5.5rem] m-0 leading-[1]">
+										Meet our
+										<br>
+										talents!
+									</h1>
+								</div>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="bg-white overflow-hidden">
+					<div class="flex items-center h-[8.25rem] w-fit will-change-transform animate-marquee">
+						<img src={goodsmile} class="w-[8rem] h-[3.5rem] mx-[2rem] max-w-[none]">
+						<img src={ubisoft} class="w-[8rem] h-[3.5rem] mx-[2rem] max-w-[none]">
+						<img src={sega} class="w-[8rem] h-[3.5rem] mx-[2rem] max-w-[none]">
+						<img src={squareenix} class="w-[8rem] h-[3.5rem] mx-[2rem] max-w-[none]">
+						<img src={funimation} class="w-[8rem] h-[3.5rem] mx-[2rem] max-w-[none]">
+						<img src={capcom} class="w-[8rem] h-[3.5rem] mx-[2rem] max-w-[none]">
+						<img src={goodsmile} class="w-[8rem] h-[3.5rem] mx-[2rem] max-w-[none]">
+						<img src={ubisoft} class="w-[8rem] h-[3.5rem] mx-[2rem] max-w-[none]">
+						<img src={sega} class="w-[8rem] h-[3.5rem] mx-[2rem] max-w-[none]">
+						<img src={squareenix} class="w-[8rem] h-[3.5rem] mx-[2rem] max-w-[none]">
+						<img src={funimation} class="w-[8rem] h-[3.5rem] mx-[2rem] max-w-[none]">
+						<img src={capcom} class="w-[8rem] h-[3.5rem] mx-[2rem] max-w-[none]">
+						<img src={goodsmile} class="w-[8rem] h-[3.5rem] mx-[2rem] max-w-[none]">
+						<img src={ubisoft} class="w-[8rem] h-[3.5rem] mx-[2rem] max-w-[none]">
+						<img src={sega} class="w-[8rem] h-[3.5rem] mx-[2rem] max-w-[none]">
+						<img src={squareenix} class="w-[8rem] h-[3.5rem] mx-[2rem] max-w-[none]">
+						<img src={funimation} class="w-[8rem] h-[3.5rem] mx-[2rem] max-w-[none]">
+						<img src={capcom} class="w-[8rem] h-[3.5rem] mx-[2rem] max-w-[none]">
+					</div>
+				</div>
 			</div>
 			<Footer/>
 		</div>
